@@ -1,0 +1,21 @@
+* Event Management Document *
+
+-we need to create new folder(mymodule) for our module inside modules folder.
+
+-make two files inside this folder to define this module in drupal the first is mymodule.info.yml and the second mymodule.module.
+
+-make a new file inside mymodule folder called mymodule.routing.yml to put our routes (listing events and the form edit or delete).
+
+-make a new file inside mymodule folder called mymodule.install to put our table(mymodule) schema listing our columns needed, we need to make two table the first called country having two
+columns (country_id with integer type and country_name with varchar type) and states table having three columns(state_id with integer type and state_name with varchar type and
+ country_id with integer type).
+
+-make a new folder inside module folder called src to make two folders Form and Controller.
+
+-make a new file called MymoduleController inside Controller.php folder puting our listing function where we list the last 5 events added and make our table.
+
+-make two files inside Form folder the first called MymoduleForm.php to build our form through buildform function where we prepare the fields will be submitted in the submitForm function
+and in this file validateForm function to put any validations needed for our form fields , and we have to function we used when change country selection to put its states (getStates function and
+ getStatesByCountry function), and these function called depend on our lines put in mymodule.routing.yml and the second called DeleteForm.php it;s like the first one but for deleting
+have three functions buildform funstion depending on the id of the row you want to delete, validateForm functions and the submitForm function and setRedirect for listing events.
+ 
