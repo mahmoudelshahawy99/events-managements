@@ -1,0 +1,28 @@
+<?php
+function mymodule_schema(){
+  $schema['mymodule'] = ['description' => 'this table is used to create events','fields'=>['id'=>['description'=>'The
+  primary identifier of the table','type'=>'serial','not null'=>TRUE,'unsigned'=>TRUE,],
+  'title'=>['description'=>'title of the event',
+  'type'=>'varchar','length'=>'40','not null'=>TRUE,],
+
+  'description'=>['description'=>'description of the event',
+  'type'=>'varchar','length'=>'40','not null'=>TRUE,],
+
+  'start_date'=>['description'=>'start date of the event',
+  'type'=>'varchar','length'=>'10','not null'=>TRUE,],
+
+  'end_date'=>['description'=>'end date of the event',
+  'type'=>'varchar','length'=>'10','not null'=>TRUE,],
+
+  'category'=>['description'=>'category of the event',
+  'type'=>'varchar','length'=>'40','not null'=>TRUE,],
+
+  'country'=>['description'=>'country id',
+  'type'=>'serial','not null'=>TRUE,],
+
+  'states'=>['description'=>'state id',
+  'type'=>'serial','not null'=>TRUE,],],
+
+  'primary key'=>['id'],];
+  return $schema;
+}

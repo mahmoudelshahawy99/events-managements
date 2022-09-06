@@ -1,0 +1,23 @@
+mymodule.mymodule_controller_listing:
+  path: 'mymodule'
+  defaults:
+    _controller: 'Drupal\mymodule\Controller\MymoduleController::listing'
+    _title: 'Listing Records'
+  requirements:
+    _permission: 'access content'
+
+mymodule.mymodule_form:
+  path: 'mymodule/form/data'
+  defaults:
+    _form: 'Drupal\mymodule\Form\MymoduleForm'
+    _title: 'Add / Edit Form'
+  requirements:
+    _permission: 'TRUE'
+
+mymodule.delete_form:
+  path: 'mymodule/form/delete/{cid}'
+  defaults:
+    _form: 'Drupal\mymodule\Form\DeleteForm'
+    _title: 'Delete Form'
+  requirements:
+    _permission: 'TRUE'

@@ -1,0 +1,5 @@
+name: Event Management
+description: Custom Module to add, edit and delete events
+type: module
+core_version_requirement: ^9
+package: Custom

@@ -1,0 +1,14 @@
+<?php
+function mymodule_menu(){
+
+  $item['mymodule'] = array('title'=>'List Records','description'=>'','route'=>'
+  mymodule.mymodule_controller_listing');
+
+  $item['mymodule/form/data'] = array('title'=>'Add / Edit Form','description'=>'','route'=>'
+  mymodule.mymodule_form');
+
+  $item['mymodule/form/delete/{cid}'] = array('title'=>'Delete Records','description'=>'','route'=>'
+  mymodule.delete_form');
+
+  return $item;
+}
